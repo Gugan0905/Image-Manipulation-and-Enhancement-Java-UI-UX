@@ -1,0 +1,48 @@
+#load goose.ppm and call it 'goose'
+load res/goose.ppm goose
+
+######## BRIGHTEN
+#brighten goose by adding 10
+brighten 10 goose goose-brighter
+
+#save goose-brighter
+save res/goose-brighter.ppm goose-brighter
+
+######## FLIP
+#flip goose vertically
+vertical-flip goose goose-vertical
+save res/goose-vertical.ppm goose-vertical
+
+#flip the vertically flipped goose horizontally
+horizontal-flip goose goose-horizontal
+save res/goose-horizontal.ppm goose-horizontal
+
+######## GREYSCALE
+#create a greyscale using only the value component, as an image goose-greyscale
+greyscale value-component goose goose-greyscale
+save res/goose-gs.ppm goose-greyscale
+
+#create a greyscale using only the red component, as an image goose-greyscale
+greyscale red-component goose goose-greyscale-red
+save res/goose-greyscale-red.ppm goose-greyscale-red
+
+#create a greyscale using only the green component, as an image goose-greyscale
+greyscale green-component goose goose-greyscale-green
+save res/goose-greyscale-green.ppm goose-greyscale-green
+
+#create a greyscale using only the blue component, as an image goose-greyscale
+greyscale blue-component goose goose-greyscale-blue
+save res/goose-greyscale-blue.ppm goose-greyscale-blue
+
+######## RGB SPLIT
+#give the goose a red tint
+rgb-split goose goose-red goose-green goose-blue
+
+#brighten just the red image
+brighten 50 goose-red goose-red
+
+######## COMBINE
+
+#combine them back, but by using the brightened red we get a red tint
+rgb-combine goose-red-tint goose-red goose-green goose-blue
+save res/goose-red-tint.ppm goose-red-tint

@@ -1,0 +1,45 @@
+#loading
+load res/goose.ppm goose
+
+#greyscale
+greyscale value-component goose goose-greyscale-value
+save res/goose-greyscale-value.ppm goose-greyscale-value
+
+greyscale luma-component goose goose-greyscale-luma
+save res/goose-greyscale-luma.ppm goose-greyscale-luma
+
+greyscale intensity-component goose goose-greyscale-intensity
+save res/goose-greyscale-intensity.ppm goose-greyscale-intensity
+
+greyscale intensity-component goose goose-greyscale-intensity
+save res/goose-greyscale-intensity.ppm goose-greyscale-intensity
+
+greyscale red-component goose goose-greyscale-red
+save res/goose-greyscale-red.ppm goose-greyscale-red
+
+greyscale green-component goose goose-greyscale-green
+save res/goose-greyscale-green.ppm goose-greyscale-green
+
+#flip
+vertical-flip goose goose-vertical
+save res/goose-vertical.ppm goose-vertical
+
+horizontal-flip goose goose-horizontal
+save res/goose-horizontal.ppm goose-horizontal
+
+#bright
+brighten 10 goose goose-brighter
+save res/goose-brighter.ppm goose-brighter
+
+brighten -10 goose goose-darker
+save res/goose-darker.ppm goose-darker
+
+# rgb split
+rgb-split goose goose-red goose-green goose-blue
+save res/goose-split-red.ppm goose-red
+save res/goose-split-green.ppm goose-green
+save res/goose-split-blue.ppm goose-blue
+
+# rgb combine
+rgb-combine goose-red-tint goose-red goose-green goose-blue
+save res/goose-red-tint.ppm goose-red-tint

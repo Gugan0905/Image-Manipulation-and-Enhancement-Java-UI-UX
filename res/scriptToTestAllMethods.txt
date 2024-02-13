@@ -1,0 +1,73 @@
+#loading
+load goose.ppm goose-ppm
+load goose.jpg goose-jpg
+#load goose.png goose-png
+#load goose.bmp goose-bmp
+
+#greyscale
+greyscale goose-ppm goose-greyscale
+save goose-greyscale.ppm goose-greyscale
+
+#Previous grayscale version
+greyscale luma-component goose-ppm goose-greyscale-luma
+save goose-greyscale-luma.ppm goose-greyscale-luma
+greyscale intensity-component goose-ppm goose-greyscale-intensity
+save goose-greyscale-intensity.ppm goose-greyscale-intensity
+greyscale intensity-component goose-ppm goose-greyscale-intensity
+save goose-greyscale-intensity.ppm goose-greyscale-intensity
+greyscale red-component goose-ppm goose-greyscale-red
+save goose-greyscale-red.ppm goose-greyscale-red
+greyscale green-component goose-ppm goose-greyscale-green
+save goose-greyscale-green.ppm goose-greyscale-green
+
+#sepia
+sepia goose-ppm goose-sepia
+save goose-sepia.ppm goose-sepia
+
+#flip
+vertical-flip goose-ppm goose-vertical
+save goose-vertical.ppm goose-vertical
+
+horizontal-flip goose-ppm goose-horizontal
+save goose-horizontal.ppm goose-horizontal
+
+#bright
+brighten 10 goose-ppm goose-brighter
+save goose-brighter.ppm goose-brighter
+
+brighten -10 goose-ppm goose-darker
+save goose-darker.ppm goose-darker
+
+
+# rgb split
+rgb-split goose-ppm goose-red goose-green goose-blue
+save goose-split-red.ppm goose-red
+save goose-split-green.ppm goose-green
+save goose-split-blue.ppm goose-blue
+
+# rgb combine
+rgb-combine goose-red-tint goose-red goose-green goose-blue
+save goose-red-tint.ppm goose-red-tint
+
+
+# blur
+blur goose-ppm goose-blur
+save goose-blur.ppm goose-blur
+
+
+#sharpen
+sharpen goose-ppm goose-sharp
+save goose-sharp.ppm goose-sharp
+
+
+#dither
+dither goose-ppm goose-dither
+save goose-dither.ppm goose-dither
+
+
+#save
+save goose-save.ppm goose-jpg
+save goose-save.jpg goose-ppm
+#save goose-save.jpg goose-png
+#save goose-save.png goose-bmp
+#save goose-save.bmp goose-ppm
